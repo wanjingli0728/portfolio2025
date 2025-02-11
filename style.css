@@ -1,0 +1,1065 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+#toolset {
+	display: none;
+}
+
+body {
+	background-color: #fff;
+    font-family: 'Monument Grotesk', regular;
+    font-style: normal;
+    line-height: 1; /* Optional: Adjust line height for readability */
+    font-size: 11pt;
+}
+
+a:active {
+	opacity: 0.7;
+}
+
+.page a.active {
+	color: #1eae00;
+    font-weight: bold;;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+b,
+strong {
+	font-weight: 750;
+    
+}
+
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	top: 0em;
+}
+
+sup {
+	top: 0em;
+}
+
+s {
+	text-decoration: line-through;
+}
+
+img {
+	border: 0;
+	padding: 0;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding: 0 0 0 0e m;
+}
+
+blockquote {
+	margin: 0;
+	padding: 0 0 0 1em;
+}
+
+hr {
+	background: rgba(0, 0, 0, 1);
+	border: 0;
+    width: 100%;
+	height: 1px;
+	display: block;
+}
+
+.content img {
+	float: none;
+	margin-bottom: 0;
+    vertical-align: bottom;
+}
+
+[image-gallery="slideshow"] {
+    margin-bottom: 2rem;
+}
+
+/**
+ * Loading Animation
+ */
+
+.loading[data-loading] {
+	position: fixed;
+	bottom: 8px; 
+    left: 8px;
+}
+
+/**
+ * Editor styles
+ */
+
+[data-predefined-style="true"] bodycopy {
+	font-size: 1.6rem;
+	font-weight: 350;
+	color: rgba(0, 0, 0, 1);
+	font-family: "Monument Grotesk Variable", Icons;
+	font-style: normal;
+	line-height: 1.5;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+[data-predefined-style="true"] bodycopy a {
+	color: rgba(0, 0, 0, 1);
+    font-size: 1.3rem;
+	text-decoration: none;
+    line-height: 1.2;
+}
+
+[data-predefined-style="true"] bodycopy a:hover {
+    color: rgba(22, 210, 0, 1);
+
+}
+
+bodycopy a.image-link,
+bodycopy a.icon-link,
+bodycopy a.image-link:hover,
+bodycopy a.icon-link:hover {
+	border-bottom: 0;
+	padding-bottom: 0;
+
+}
+
+[data-predefined-style="true"] h1 {
+	font-family: "Monument Grotesk Variable", Icons;
+	padding: 0;
+	margin: 0;
+	font-size: 1.4rem;
+	line-height: 1.3;
+	color: rgba(0, 0, 0, 1);
+    letter-spacing: px;
+	font-style: normal;
+	font-weight: 343;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+h3 {
+	font-family: "Work Sans";
+	font-style: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 1);
+	font-size: 0.9rem;
+	line-height: 1.4;
+}
+
+h3 a:link {
+    text-decoration: none;
+    color:#000000
+}
+h3 a:visited {
+    color: black; /* Style visited links inside h2 */
+}
+
+h1 a {
+	color: rgba(0, 0, 0, 1);
+}
+
+ h2 {
+	font-family: "Work Sans";
+	font-style: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 1);
+	font-size: 1rem;
+	line-height: 1.6;
+	}
+h2 a:link {
+    text-decoration: none;
+    color:#000000
+}
+h2 a:visited {
+    color: black; /* Style visited links inside h2 */
+}
+
+
+[data-predefined-style="true"] h4 {
+	font-family: Inter, Icons;
+	font-style: normal;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 1);
+	font-size: 1.1rem;
+	line-height: 1.4;
+	}
+
+
+
+[data-predefined-style="true"] h4 a:hover {
+    color: rgba(255, 255, 255, 1);
+	background-color: rgba(22, 210, 0, 1);
+    font-weight: 550;
+    font-size: 1.1rem;
+	line-height: 1.4;
+}
+
+[data-predefined-style="true"] h4 a {
+	color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+
+[data-predefined-style="true"] small {
+	display: inline-block;
+	font-size: 1.1rem;
+	line-height: 1.5;
+	font-family: Inter, Icons;
+	font-style: normal;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 1);
+    font-kerning:initial;
+}
+
+[data-predefined-style="true"] small a {
+	color: rgba(0, 0, 0, 1);
+    font-size: 1.1rem;
+}
+
+[data-predefined-style="true"] small a:hover {
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(22, 210, 0, 1);
+	border-bottom-width: 0em;
+    font-size: 1.1rem;
+}
+/**
+ * Breakpoints
+ */
+
+
+[data-css-preset] .page {
+    background-color: initial /*!page_bgcolor*/;
+}
+
+.mobile .page,
+[data-css-preset].mobile .page {
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+	background-color: transparent /*!page_bgcolor*/;
+}
+
+[data-css-preset] .container {
+	margin-left: auto /*!content_right*/;
+	margin-right: 0 /*!content_right*/;
+	text-align: cen /*!text_left*/;
+    
+}
+
+[data-css-preset] body {
+	background-color: transparent /*!body_bgcolor*/;
+}
+
+[data-css-preset] .container_width {
+	width: 87%/*!content_right*/;
+}
+
+[data-css-preset] .content_padding {
+	padding-top: 0rem /*!main_margin*/;
+	padding-bottom: 0rem /*!main_margin*/;
+	padding-left: 0rem /*!main_margin*/;
+	padding-right: 0rem /*!main_margin*/;
+}
+
+
+/**
+ * Thumbnails
+ */
+
+div[thumbnails] {
+	justify-content: flex-start;
+}
+
+[data-css-preset] .thumbnails {
+   	background-color: rgb(255, 255, 255)/*!thumbnails_bgcolor*/;   
+}
+
+[data-css-preset] .thumbnails_width {
+    width: 84%/*!thumbnails_width*/;
+}
+
+[data-css-preset] [thumbnails-pad] {
+    padding: 0.25rem/*!thumbnails_padding*/;
+}
+
+[data-css-preset] [thumbnails-gutter] {
+    margin: auto/*!thumbnails_padding*/;
+}
+
+[data-css-preset] [responsive-layout] [thumbnails-pad] {
+    padding: 0.5rem/*!responsive_thumbnails_padding*/; 
+}
+
+[data-css-preset] [responsive-layout] [thumbnails-gutter] {
+    margin: auto/*!responsive_thumbnails_padding*/; 
+}
+
+.thumbnails .thumb_image {
+	outline: 0px solid rgba(0,0,0,.12);
+    outline-offset: -1px;
+}
+
+.thumbnails .title {
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+    font-size: 1.7rem;
+	font-weight: 380;
+	color: rgba(0, 0, 0, 1);
+	font-family: "Monument Grotesk Variable", Icons;
+	font-style: normal;
+	line-height: 1.3;
+    text-align:left;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+.thumbnails {
+    text-align: right;
+}
+.thumbnails .tags {
+    margin-top: .2rem;
+    text-align:left;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.84);
+	font-family: "Monument Grotesk Variable", Icons;
+	font-style: normal;
+	line-height: 1.2;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;;
+}
+
+.thumbnails .tags a {
+	border-bottom: 0;
+    color: rgba(0, 0, 0, 0.58);
+    text-decoration: none;
+    text-align:right;
+}
+
+.thumbnails .has_title .tags {
+	margin-top: -1.8rem;
+}
+
+body.mobile #site_menu_button {
+	margin: -10px;
+    font-size: 32px;
+}
+
+/**
+ * Site Menu
+ */
+
+#site_menu {
+	font-family: "Monument Grotesk Variable", Icons;
+	background: rgba(255, 255, 255, 1);
+	font-size: 1.3rem;
+	font-style: normal;
+	font-weight: 300;
+	padding: 20px 30px 90px 30px;
+	max-width: 10%;
+	text-align: left;
+	display: flex;
+	justify-content: flex-start;
+	font-variation-settings: 'slnt' 0, 'MONO' 0;
+}
+
+body.mobile #site_menu {
+	width: 100%;
+}
+
+#site_menu .page-link a {
+	color: rgba(0, 0, 0, 0.75);
+}
+
+#site_menu .set-link > a {
+	color: rgba(0, 0, 0, 0.75);
+	font-weight: bold;
+}
+
+#site_menu a:active {
+	opacity: .7;
+}
+
+#site_menu a.active {
+	opacity: .4;
+}
+
+#site_menu .close {
+	display: none;
+	color: rgba(0, 0, 0, 0.4);
+	line-height: .85em;
+	font-size: 45px;
+}
+
+body.mobile #site_menu .close {
+	display: block;
+	font-size: 50px;
+	line-height: 1em;
+}
+
+#site_menu .break {
+	height: 28px;
+}
+
+#site_menu .indent {
+	margin-left: 28px;
+}
+
+/*
+ * Shop Button
+ */
+
+[data-css-preset] #shop_button {
+	color: rgba(0, 0, 0, 0.85);
+    background: transparent;
+	font-size: 32px;
+    font-style: normal;
+	font-weight: 400;
+    line-height: 1;
+    position: fixed;
+	padding: 6px;
+	top: 1rem /*!shop_button*/;
+	left: 1.5rem /*!shop_button*/;
+}
+
+#shop_button.text {
+    font-size: 1.6rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.75);
+	font-family: Diatype, Icons;
+    padding: 0;
+    line-height: 1.3;
+	font-style: normal;
+}
+
+#shop_button.custom_icon {
+	width: 40px;
+    height: auto;
+}
+
+body.mobile #shop_button:not(.text) {
+	margin: -6px;
+    font-size: 40px;
+}
+
+/*
+ * Shop Product Widget
+ */
+
+.shop_product {
+    width: 100%;
+	max-width: 22rem;
+    position: relative;
+    display: block;
+}
+
+.shop_product .price {
+	font-family: Diatype, Icons;
+	font-size: 1.6rem;
+	line-height: 1;
+	color: rgba(0, 0, 0, 0.75);
+    display: block;
+    margin-bottom: 1rem;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.shop_product .dropdown {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, "Sans Serif", Icons;
+    font-size: 1.3rem;
+    display: inline-block;
+	width: 100%;
+    border: 1px solid rgba(0,0,0,.2);
+    background:  white url(https://static.cargo.site/assets/images/select-line-arrows.svg) no-repeat right;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    padding: .7rem 2.5rem 0.6rem 1rem;
+	font-style: normal;
+	font-weight: 400;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.shop_product .button {
+	font-family: Diatype, Icons;
+	font-size: 1.3rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: rgba(255,255,255,1);
+    flex: 0 0 50%;
+    text-align: left;
+    display: inline-block;
+	line-height: 1;
+    padding: .8rem 1rem 0.8rem;
+	font-style: normal;
+	font-weight: 700;
+}
+
+/*
+ * Image Zoom
+ */
+
+.content img.image-zoom:active {
+  opacity: .7;
+}
+
+/**
+ * Quick View
+ */
+
+[data-css-preset] .quick-view {
+    padding-top: 2.5rem /*!quick_view_padding*/;
+    padding-bottom: 2.5rem /*!quick_view_padding*/;
+    padding-left: 2.5rem /*!quick_view_padding*/;
+    padding-right: 2.5rem /*!quick_view_padding*/;
+    height: 100% /*!quick_view_height*/;
+    width: 100% /*!quick_view_width*/;
+}
+
+body.mobile .quick-view {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+[data-css-preset] .quick-view-background {
+	background: rgba(255, 255, 255, 1) /*!quick_view_bgcolor*/;
+}
+
+.quick-view-caption {
+	font-family: Diatype, Icons;
+    transition: 100ms opacity ease-in-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 3.5rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 400;
+    line-height: 1.3;
+}
+
+.quick-view-caption span {
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    background: rgba(0,0,0,0.4);
+    color: white;
+}
+
+
+/**
+ * Quick View Navigation 
+ */
+
+.quick-view-navigation .left-arrow {
+    left: 10px;
+}
+
+.quick-view-navigation .right-arrow {
+    right: 10px;
+}
+
+.quick-view-navigation .left-arrow,
+.quick-view-navigation .right-arrow {
+    /* Change height/width together to scale */
+    height: 36px;
+    width: 36px;
+}
+
+.quick-view-navigation .left-arrow .inner-color,
+.quick-view-navigation .right-arrow .inner-color {
+    stroke: #fff;
+    stroke-width: 0px;
+}
+
+.quick-view-navigation .left-arrow .outer-color,
+.quick-view-navigation .right-arrow .outer-color {
+    stroke: rgba(0, 0, 0, 0.85);
+    stroke-width: 2px;
+}
+
+.quick-view-navigation .close-button {  
+    top: 10px;
+    right: 10px;
+    /* Change height/width together to scale */
+    width: 36px;
+    height: 36px;
+}
+
+.quick-view-navigation .close-button .inner-color {
+    stroke: #fff;
+    stroke-width: 0px;
+}
+
+.quick-view-navigation .close-button .outer-color {
+    stroke: rgba(0, 0, 0, 0.85);
+    stroke-width: 2px;
+}
+
+/** 
+ * Image Gallery Navigation Arrows 
+ */
+ 
+.image-gallery-navigation .left-arrow,
+.image-gallery-navigation .right-arrow {
+    /* Change height/width together to scale */
+    height: 36px;
+    width: 36px;
+}
+
+.image-gallery-navigation .left-arrow .inner-color,
+.image-gallery-navigation .right-arrow .inner-color {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.image-gallery-navigation .left-arrow .outer-color,
+.image-gallery-navigation .right-arrow .outer-color {
+    stroke: rgba(0, 0, 0, 0.6);
+    stroke-width: 3px;
+}
+
+/**
+ * Wallpaper Backdrop Navigation Arrows 
+ */
+
+.wallpaper-navigation .left-arrow,
+.wallpaper-navigation .right-arrow {
+   /* Change height/width together to scale */
+   width: 36px;
+   height: 36px;
+}
+
+.wallpaper-navigation .left-arrow .inner-color,
+.wallpaper-navigation .right-arrow .inner-color {
+   stroke: #fff;
+    stroke-width: 2px;
+}
+
+.wallpaper-navigation .left-arrow .outer-color,
+.wallpaper-navigation .right-arrow .outer-color {
+    stroke: rgba(0, 0, 0, 0.6);
+    stroke-width: 3px;
+}
+
+
+/**
+ * Feed
+ */
+
+.feed .content_container .page {
+    border-top: 0px dashed rgba(0, 0, 0, 0.2);
+}
+
+.feed .content_container .page_container:first-child .page {
+	border-top: 0;
+}
+
+
+
+/*
+ * Audio Player
+ */
+
+.audio-player {
+    max-width: 36rem;
+    height: 3.3rem;
+    outline: 1px solid rgba(0,0,0,0.15);
+    color: rgba(0, 0, 0, 0.6);
+    background: #fff;
+    font-size: 1.4rem;
+    line-height: 1.3;
+	font-family: Diatype, Icons;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: 1px 1px 1em 1px;
+}
+
+body.mobile .audio-player {
+    max-width: 100%;
+}
+
+.audio-player .separator {
+    width: 1px;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.audio-player .button {
+    background: transparent;
+    cursor: pointer;
+    fill: rgba(0, 0, 0, 0.85);
+}
+
+.audio-player .icon {
+    fill: rgba(0, 0, 0, 0.85);
+    padding: 30%;
+    width: 100%;
+    margin: auto;
+}
+
+.audio-player .buffer {
+    background: rgba(0,0,0,0.03);
+}
+
+.audio-player .progress {
+    background: rgba(0,0,0,0.1);
+}
+
+.audio-player .progress-indicator {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    width: 1px;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    cursor: ew-resize;
+}
+
+.audio-player .note-icon {
+    height: 100%;
+    width: 3.8rem;
+    padding: 0.9rem;
+    fill: rgba(0, 0, 0, 0.5);
+}
+
+.audio-player .current-time {
+    padding-left: 1rem;
+}
+
+.audio-player .total-time {
+    padding-right: 1rem;
+}
+
+
+.line{
+    border-left:1px solid black;
+    height: 850px;
+
+    }
+.aboutview_YY {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    font-size: 0;
+    border-bottom: 1px solid #000;}
+.font-description {
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+p.solid {outline-style: solid;}
+
+.font-about-title{
+	padding-top: 2rem;
+	margin: 0;
+	color: rgba(0, 0, 0, 1);
+	font-size: 1.1rem;
+	line-height: 1.3;
+    text-transform: uppercase;
+    font-family: 'Work Sans';
+}
+
+.button-4-1 {
+    --text-style: "button 4-1";
+    font-size: 8pt;
+    font-weight: 380;
+    line-height: 2;
+    letter-spacing: 0em;
+    color: #000000;
+    display: inline-block;
+    border-radius: 999rem;
+    padding-top: 1rem;
+    padding-right: 1.4rem;
+    padding-bottom: 1rem;
+    padding-left: 1.3rem;
+    border-width: 0.1rem;
+    border-color: rgba(0,0,0,0.85);
+    font-family: "Work Sans";
+}
+
+#parent {
+  width: 1000px;
+  margin: auto;
+  padding: 10px;
+    
+    
+}
+
+.media{
+  -webkit-box-shadow: 10px 10px 61px 6px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 61px 6px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 61px 6px rgba(0, 0, 0, 0.25);
+}
+
+.container-1:before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  width: 303.061px;
+  height: 655.689px;
+  -webkit-box-shadow: 0 0 0 7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 0 7px transparent;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 1);
+/*   box-shadow: 0px 0px 61px 6px rgba(0, 0, 0, 0.31); */
+  pointer-events: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.gd-content {
+    padding: 0em 0 0em 1em;
+    
+}
+
+.date{
+	font-family: "Routed Gothic", Icons;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.75em;
+    font-weight: 400;
+	font-style: normal;
+}
+
+.image-bank {
+  height: 70vh;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 4px;
+  overflow-x: auto; /* Enable horizontal scroll with scrollbar */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  cursor: ew-resize;
+}
+
+.image-bank img, .image-bank video, .image-bank iframe {
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.image-bank.active {
+  cursor: ew-resize; /* Change cursor during dragging */
+}
+
+/* Optional: Custom scrollbar styling */
+.image-bank::-webkit-scrollbar {
+  height: 12px;
+}
+
+.image-bank::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scroll thumb */
+  border-radius: 10px;
+}
+
+.image-bank::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color when hovered */
+}
+
+.image-bank::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scroll track */
+}
+
+
+.project-description {
+    margin-top: 17px;
+    display: flex;
+    font-size: 1em;
+        line-height: 1.5em;
+}
+.synopsis {
+    width: 68%;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+.credits {
+    width: 30%;
+    flex-shrink: 1;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    margin-right: 8px;
+}
+
+.image-container span {
+  grid-column-start: 1;
+  margin-right: 8px;
+}
+
+video {
+    height: 100%;
+    margin-right: 8px;
+    display: block;
+}
+
+video:hover::-webkit-media-controls {
+    display: none !important;
+}
+
+video:hover::-moz-media-controls {
+    display: none !important;
+}
+
+video:hover::-ms-media-controls {
+    display: none !important;
+}
+
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    font-size: 70px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    margin-top: 10px;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls input {
+    margin-right: 20px;
+}
+
+
+.button {
+  padding: 12px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.full-height-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding-top:5px;
+    border-right: solid 1.4px black;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.content {
+    margin-left: 140px; /* Matches sidebar width + some padding */
+    padding-left: 10px;
+}
+.full-page-image {
+  max-width:  500px;
+}
+
+.button-4-1 {
+    --text-style: "button 4-1";
+    font-size: .75rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 0.7;
+    letter-spacing: 0em;
+    font-variation-settings: 'slnt' 0, 'MONO' 0;
+    color: white;
+    background-color: #000000;
+    display: inline-block;
+    border-radius: 999rem;
+    padding: 10px 20px;
+}
+
+.button-link {
+    color: white; /* Link text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: inherit; /* Inherit font-weight from parent */
+    font-size: inherit; /* Inherit font-size from parent */
+    font-family: inherit; /* Inherit font-family from parent */
+}
+
+.button-link:hover {
+    color: #f0f0f0; /* Slightly lighter text color on hover */
+    text-decoration: underline; /* Optional hover underline */
+}
+  
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Example usage of a unique class for Work Sans font */
+.work-sans-title {
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Use a value from 100 to 900 */
+    font-style: normal;
+}
+  
+.work-sans-body {
+    font-family: "Work Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+}
+
+.underline {
+    text-decoration: none;
+    color: #000; /* Black text */
+    font-family: 'Monument Grotesk'; /* Default font family */
+    font-style: normal; /* Default font style */
+}
+
+.underline:hover {
+    font-family: 'Monument Grotesk'; /* Use the same font family */
+    font-style: italic; /* Apply italic style on hover */
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'Monument Grotesk'; /* Font family name */
+    font-weight: 400; /* Regular weight */
+    font-style: normal; /* Default style */
+    src: url('Fonts/ABCMonumentGrotesk-Light-Trial.otf') format('opentype'); /* Font file */
+}
+
+@font-face {
+    font-family: 'Monument Grotesk'; /* Same font family */
+    font-weight: 400; /* Regular weight */
+    font-style: italic; /* Italic style */
+    src: url('Fonts/ABCMonumentGrotesk-LightItalic-Trial.otf') format('opentype'); /* Font file */
+}
+

@@ -1063,3 +1063,32 @@ textarea {
     src: url('Fonts/ABCMonumentGrotesk-LightItalic-Trial.otf') format('opentype'); /* Font file */
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 5px; /* Space between items */
+    margin: auto;
+}
+
+.grid-item {
+    background: white;
+    text-align: center;
+}
+
+.grid-item img, .grid-item video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -46,3 +46,61 @@ document.addEventListener("DOMContentLoaded", () => {
         adjustContentStyles();
     });
 });
+// JavaScript 实现
+let currentLang = localStorage.getItem('preferredLang') || 
+                 (navigator.language.startsWith('zh') ? 'zh' : 'en');
+
+// 初始化语言按钮样式
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.classList.toggle('active', btn.dataset.lang === currentLang);
+});
+
+// 语言切换逻辑
+async function switchLanguage(lang) {
+  if (lang === currentLang) return;
+
+  // 加载语言包
+  const translations = await loadLanguage(lang);
+  
+  // 更新内容
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    el.textContent = translations[el.dataset.translate] || el.dataset.translate;
+  });
+
+  // 更新字体
+  document.body.setAttribute('data-lang', lang);
+  
+  // 更新按钮状态
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // 保存设置
+  localStorage.setItem('preferredLang', lang);
+  currentLang = lang;
+}
+
+// 点击事件绑定
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+});
+
+// 语言包加载函数
+async function loadLanguage(lang) {
+  try {
+    const response = await fetch(`/locales/${lang}.json`);
+    return await response.json();
+  } catch (error) {
+    console.error('语言包加载失败:', error);
+    return {};
+  }
+}
+
+// 初始化加载
+(async () => {
+  const translations = await loadLanguage(currentLang);
+  document.querySelectorAll('[data-translate]').forEach(el => {
+    el.textContent = translations[el.dataset.translate] || el.dataset.translate;
+  });
+  document.body.setAttribute('data-lang', currentLang);
+})();

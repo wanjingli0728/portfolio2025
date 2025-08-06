@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root { 
+    --zh-font: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --en-font: "Monument Grotesk", "Work Sans", sans-serif;}
+
+
 #toolset {
 	display: none;
 }
 
 body {
+    font-family: var(--en-font);
+    transition: font-family 0.3s; 
 	background-color: #fff;
     font-family: 'Monument Grotesk', regular;
     font-style: normal;
     line-height: 1; /* Optional: Adjust line height for readability */
     font-size: 11pt;
 }
+
+[data-lang="zh"] body {
+    font-family: var(--zh-font);
+  }
 
 a:active {
 	opacity: 0.7;
@@ -1169,6 +1180,32 @@ textarea {
 .clear {
     clear: both;
 }
+
+.language-buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 20px;
+}
+.language-buttons h3 {
+    display: inline;
+}
+
+.lang-btn {
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background: #f0f0f0;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .lang-btn.active {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
 @media screen and (max-width: 786px) {
     .left-col,

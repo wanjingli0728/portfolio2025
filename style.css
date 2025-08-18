@@ -12,7 +12,8 @@
 body {
     font-family: var(--en-font);
     transition: font-family 0.3s; 
-	background-color: #fff;
+	background-color: black;
+    color: white;
     font-family: 'Monument Grotesk', regular;
     font-style: normal;
     line-height: 1; /* Optional: Adjust line height for readability */
@@ -22,6 +23,27 @@ body {
 [data-lang="zh"] body {
     font-family: var(--zh-font);
   }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.credits {
+    color: white;
+}
+
+.synopsis {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
 
 a:active {
 	opacity: 0.7;
@@ -83,6 +105,7 @@ hr {
     width: 100%;
 	height: 1px;
 	display: block;
+    border-color: white;
 }
 
 .content img {
@@ -159,21 +182,21 @@ h3 {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
-	color: rgba(0, 0, 0, 1);
+	color: white;
 	font-size: 0.9rem;
 	line-height: 1.4;
 }
 
 h3 a:link {
     text-decoration: none;
-    color:#000000
+    color: white;
 }
 h3 a:visited {
-    color: black; /* Style visited links inside h2 */
+    color: white; /* Style visited links inside h2 */
 }
 
 h1 a {
-	color: rgba(0, 0, 0, 1);
+	color: white;
 }
 
  h2 {
@@ -182,16 +205,16 @@ h1 a {
 	font-weight: 400;
 	padding: 0;
 	margin: 0;
-	color: rgba(0, 0, 0, 1);
+	color: white;
 	font-size: 1rem;
 	line-height: 1.6;
 	}
 h2 a:link {
     text-decoration: none;
-    color:#000000
+    color: white;
 }
 h2 a:visited {
-    color: black; /* Style visited links inside h2 */
+    color: white; /* Style visited links inside h2 */
 }
 
 
@@ -765,7 +788,7 @@ body.mobile .audio-player {
     column-gap: 10px;
     row-gap: 10px;
     font-size: 0;
-    border-bottom: 1px solid #000;}
+    border-bottom: 1px solid white;}
 .font-description {
     font-size: 15px;
     text-align: left;
@@ -777,7 +800,7 @@ p.solid {outline-style: solid;}
 .font-about-title{
 	padding-top: 2rem;
 	margin: 0;
-	color: rgba(0, 0, 0, 1);
+	color: rgb(255, 255, 255);
 	font-size: 1.1rem;
 	line-height: 1.3;
     text-transform: uppercase;
@@ -833,7 +856,7 @@ p.solid {outline-style: solid;}
 }
 
 .gd-content {
-    padding: 0em 0 0em 1em;
+    padding: 0em 0 0em 0.8em;
     
 }
 
@@ -851,16 +874,36 @@ p.solid {outline-style: solid;}
   flex-wrap: nowrap;
   width: 100%;
   margin-top: 4px;
-  overflow-x: auto; /* Enable horizontal scroll with scrollbar */
-  scroll-behavior: smooth; /* Smooth scrolling */
+  overflow-x: auto;   /* horizontal scroll */
+  overflow-y: hidden; /* avoid vertical bar overlapping */
+  scroll-behavior: smooth;
   cursor: ew-resize;
+
+  /* Firefox: thumb + transparent track (images not supported) */
+  scrollbar-color: rgba(179,132,132,.6) transparent;
+  scrollbar-width: thin;
 }
 
-.image-bank img, .image-bank video, .image-bank iframe {
-  height: 100%;
-  flex-shrink: 0;
-  object-fit: cover;
-  margin-right: 8px;
+/* WebKit (Chrome/Edge/Safari) */
+.image-bank::-webkit-scrollbar {
+  height: 8px;
+}
+
+.image-bank::-webkit-scrollbar-track {
+  background-color: black;
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 8px 8px; /* Size/spacing of dots */
+}
+
+.image-bank::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+}
+
+/* Firefox scrollbar */
+.image-bank {
+    scrollbar-color: rgba(255, 255, 255, 0.6) transparent;
+    scrollbar-width: thin;
 }
 
 .image-bank.active {
@@ -1015,11 +1058,12 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    color: white;
 }
 
 .content {
-    margin-left: 140px; /* Matches sidebar width + some padding */
-    padding-left: 10px;
+    margin-left: 0px; /* Matches sidebar width + some padding */
+    padding-left: 0px;
     margin-top: 0; /* Default top margin for larger screens */
 }
 .full-page-image {
@@ -1087,7 +1131,7 @@ textarea {
 
 .underline {
     text-decoration: none;
-    color: #000; /* Black text */
+    color: white; /* Black text */
     font-family: 'Monument Grotesk'; /* Default font family */
     font-style: normal; /* Default font style */
 }
@@ -1120,7 +1164,7 @@ textarea {
 }
 
 .grid-item {
-    background: white;
+    background: black
     text-align: center;
 }
 
@@ -1148,13 +1192,13 @@ textarea {
     left: 0;
     width: 100%;
     height: 40px;
-    background: white;
+    background: black;
+    border-bottom: 1px solid white;
     box-shadow: 0 5px 6px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 20px;
-    border-bottom: 1px solid black;
     box-sizing: border-box;
 }
 #topnav nav {
@@ -1207,10 +1251,52 @@ textarea {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-@media screen and (max-width: 786px) {
-    .left-col,
-    .right-col {
-      width: 100%;
-      float: none;
-    }
-  }
+body {
+    background-color: black;
+    color: white;
+}
+
+#topnav {
+    background-color: black;
+    color: white;
+}
+
+#topnav a {
+    color: white;
+    text-decoration: none;
+}
+
+#topnav a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    color: white;
+}
+
+.full-height-border {
+    background-color: black;
+    color: white;
+    border-right: 1px solid white;
+}
+
+hr {
+    border-color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.lang-btn {
+    color: white;
+}
+
+.lang-btn.active {
+    text-decoration: underline;
+}

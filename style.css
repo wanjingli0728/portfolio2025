@@ -878,33 +878,22 @@ p.solid {outline-style: solid;}
   overflow-y: hidden; /* avoid vertical bar overlapping */
   scroll-behavior: smooth;
   cursor: ew-resize;
-
-  /* Firefox: thumb + transparent track (images not supported) */
-  scrollbar-color: rgba(179,132,132,.6) transparent;
-  scrollbar-width: thin;
+  padding-bottom: 8px
+  
 }
 
-/* WebKit (Chrome/Edge/Safari) */
-.image-bank::-webkit-scrollbar {
-  height: 8px;
-}
+
 
 .image-bank::-webkit-scrollbar-track {
-  background-color: black;
-  background-image: radial-gradient(circle, white 1px, transparent 1px);
-  background-size: 8px 8px; /* Size/spacing of dots */
+  background: transparent !important;
+  box-shadow: inset 0 0 0 1000px black; /* Force black fill */
+  background-size: 8px 8px;
 }
 
-.image-bank::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 4px;
-}
+
 
 /* Firefox scrollbar */
-.image-bank {
-    scrollbar-color: rgba(255, 255, 255, 0.6) transparent;
-    scrollbar-width: thin;
-}
+
 
 .image-bank.active {
   cursor: ew-resize; /* Change cursor during dragging */
@@ -918,12 +907,12 @@ p.solid {outline-style: solid;}
 }
 /* Optional: Custom scrollbar styling */
 .image-bank::-webkit-scrollbar {
-  height: 12px;
+  height: 6px;
 }
 
 .image-bank::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scroll thumb */
-  border-radius: 10px;
+  background: #b2b2b2; /* Color of the scroll thumb */
+  
 }
 
 .image-bank::-webkit-scrollbar-thumb:hover {
@@ -931,7 +920,9 @@ p.solid {outline-style: solid;}
 }
 
 .image-bank::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the scroll track */
+  background: transparent !important;
+  box-shadow: inset 0 0 0 1000px black;
+  height: 12px;
 }
 
 
@@ -982,9 +973,9 @@ p.solid {outline-style: solid;}
     }
 }
 img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+    
     margin-right: 8px;
+    
 }
 
 .image-container span {
@@ -1164,7 +1155,7 @@ textarea {
 }
 
 .grid-item {
-    background: black
+    background: black;
     text-align: center;
 }
 
